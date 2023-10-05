@@ -1,0 +1,397 @@
+
+
+
+
+
+		 
+{% extends  'my_job/primry.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+
+ <div class="row" align="center">
+
+   <div class="col-lg-12" >
+    <div   class="btn btn-success" ><h1>      ــــــــــــ    مكتـــب الأشغـــــال العــامــــة والطـــرق   - محــافــظــة صنعــــاء  ـــــــــــــ</h1>
+  </div></div> </div>
+<br>
+ <div class="row" align="center">
+
+   <div class="col-lg-12" >
+    <div   class="btn btn-outline-success" height="70%"  ><font size="+3"> ـــــــــــــــــــــــــــــــ. فـــرع مــديريـــة : صنعـــاء الجديدة ( مـــركز المحافظــــة )  ــــــــــــــــــــــــــــــــ</font>
+  </div></div> </div>
+
+<div class="row">
+ <div class="col-lg-12" style="">
+  <marquee direction="right"  class="btn btn-secondary" height="90%"  ><font size="+3">رؤيتنا -
+
+بناء مدينة سعيدة ومستدامة    -   رسالتنا -
+
+تخطيط وتطوير وإدارة مدينة متميّزة تتوافر فيها استدامة رفاهية العيش ومقوّمات النجاح  </font></marquee></div>
+</div>
+<br>
+
+    <div class="row">
+
+ <div class="col-lg-12">
+   <div class="col-lg-3">
+   <a class="form-control btn btn-outline-primary"  
+   href="{% url 'my_job:show_sevice_jamhore' %}" >خدمة الجمهور</a>
+</div>
+  <div class="col-lg-3">
+   <a class="form-control btn btn-outline-primary"  
+   href="{% url 'my_job:show_sevice_jamhore' %}" >الشؤون الفنية</a>
+</div>
+ </div>
+    <div class="row">
+       <div class="col-lg-12">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="align-items: center;">
+<ul class="nav nav-tabs" >
+
+
+
+   <div class="dropdown-menu">
+    
+   
+  </li>
+</div>
+ <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">
+ خدمــــة الجمهور
+</font>
+</a>
+
+     
+
+
+      
+    <div class="dropdown-menu">
+
+    
+    
+  
+   
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:show_sevice_jamhore' %}">شاشة خدمة الجمهور</a>
+            <a class="btn btn-outline-secondary" href="{% url 'my_job:add_shkou' %}"> اضافة شكــــــــــوى</a>
+            <br>
+        <a class="btn btn-outline-secondary" href="{% url 'my_job:blagh_t' %}"> اضافة بلاغ</a>
+        </div></li></div>
+
+                  <div class="col-lg-3">
+       <li class="nav-item dropdown">
+          <a class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">الشــــؤون الفنــية</font></a>
+    <div class="dropdown-menu">
+      <a class="btn btn-outline-secondary"  href="{% url 'my_job:alfani_show_form' %}"><font size="+1"> مهندس الشؤون الفنية </font></a> 
+       <a  class="btn btn-outline-secondary" href="{% url 'my_job:show_manger_fan_nah_all' %}"><font size="+1">مدير الشؤون الفنية  </font></a>
+   </div></li></div>
+         <div class="col-lg-3">
+       <li class="nav-item dropdown">
+          <a  class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">قسم رخص البناء</font></a>
+    <div class="dropdown-menu">
+        <a class="btn btn-outline-secondary" href="{% url 'my_job:show_maktis_bana_type_1' %}">مختص البنا</a>
+        <a class="btn btn-outline-secondary" href="{% url 'my_job:form_show_nah' %}">اصدار رخص البناء</a>
+      </div></li></div>
+
+        
+     <div class="col-lg-3">
+       <li class="nav-item dropdown">
+          <a class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">قســـــم التفتـــــيش</font></a>
+
+    <div class="dropdown-menu"> 
+      <a href="{% url 'my_job:msaol_alhajaz' %}"   class="btn btn-outline-secondary" >
+          مسوؤل الحجز
+         </a>
+       <a class="btn btn-outline-secondary"  href="{% url 'my_job:type_rakis_taftish' %}"> 
+       تفتيش بناء</a>
+
+
+          <a class="btn btn-outline-secondary" href="{% url 'my_job:type_tftish_mahnt' %}">تفتيش المرافق</a>
+                  <a class="btn btn-outline-secondary" href="{% url 'my_job:type_tftashi_merf' %}">تفتيش المهن</a>
+
+            
+         
+   
+        
+       
+</div></li></div>
+   
+
+
+</ul>
+</nav> 
+  </div>
+</div>
+
+
+<div class="row">
+
+ <div class="col-lg-12">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="align-items: center;">
+  <ul class="nav nav-tabs" >
+
+    <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a class="btn btn-outline-secondary"class="btn btn-warning" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">مــدير الفــــــرع</font></a>
+    <div class="dropdown-menu">
+       
+     
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:manger_show_page' %}">المدير </a>
+        
+ <a class="btn btn-outline-secondary" href="{% url 'my_job:werd_sader_secrt_mder' %}"> السكرتارية </a>
+   
+        </div></li></div>
+   <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3"> الشؤون المالـــية</font></a>
+    <div class="dropdown-menu">
+        
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:show_form_to_account'%}">التوريد</a>
+        <a class="btn btn-outline-secondary" href="{% url 'my_job:werd_sader_mlah'  %}">المعاملات الواردة</a>
+
+    
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:print_hafth_torid'  %}"> الحسابات والمراجعه</a>
+      
+    
+   
+   
+        </div></li></div>
+         
+        
+   <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a  class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">المرافق والاسواق</font></a>
+    <div class="dropdown-menu">
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:asog_bara'  %}">المختص</a>
+        <a class="btn btn-outline-secondary" href="{% url 'my_job:manger_asoag'  %}">مدير المرافق</a>
+        <a   class="btn btn-outline-secondary" href="{% url 'my_job:asoage_total_resome'  %}">احتساب الرسوم</a>
+       <a class="btn btn-outline-secondary" href="{% url 'my_job:go_to_maklf_mahle_mahn' %}">المخالفات الواردة</a>
+          
+    
+        </div></li></div>
+
+
+
+   <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a  class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">قسم تراخيص المهن</font></a>
+    <div class="dropdown-menu">
+   
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:resome_mahn' %}">ادخل بيانات المفتش </a>
+         <a class="btn btn-outline-secondary" href="{% url 'my_job:go_maktis_add_resome_mahn' %}">اضافة الرسوم </a>
+          <a class="btn btn-outline-secondary" href="{% url 'my_job:show_data_tahd_mahn' %}">عرض التعهدات</a>
+         
+          <a  class="btn btn-outline-secondary" href="{% url 'my_job:go_to_maklf_new_mahn_t' %}">المخالفات الواردة</a>
+
+          
+       
+        </div></li></div>
+
+
+
+ 
+
+
+
+    
+
+  
+   
+   
+    
+  
+  
+
+
+
+
+</ul>
+</nav>
+ </div>
+ </div>
+ 
+
+
+ <div class="row" align="center">
+
+ <div class="col-lg-12" >
+<nav class="navbar navbar-inverse navbar-fixed-top" style="align-items: center;">
+  <ul class="nav nav-tabs"  >
+
+           <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3"> المـــوارد البشرية</font></a>
+    <div class="dropdown-menu">
+      <a class="btn btn-outline-secondary" href="{%  url 'my_job:add_employ_new'  %}"> قسم الموارد البشرية</a>
+      <a class="btn btn-outline-secondary" href="{% url 'my_job:show_mangemet_end_emp_a'  %}"> عرض الموارد البشرية</a>
+      <a class="btn btn-outline-secondary" href="#">قسم التدريب والتاهيل</a>
+      <a class="btn btn-outline-secondary" href="#">قسم الوثائق</a>
+        </div></li></div>
+   <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a  class="btn btn-outline-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">الشــؤون القانونية</font></a>
+    <div class="dropdown-menu">
+        
+     
+   
+   
+        </div></li></div>
+ 
+        
+   <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a  class="btn btn-outline-secondary"data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">التخطيط والاحصاء</font></a>
+    <div class="dropdown-menu">
+   
+        </div></li></div>
+
+
+
+   <div class="col-lg-3">
+  <li class="nav-item dropdown">
+    <a  class="btn btn-outline-secondary"data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font size="+3">الشكاوى والبلاغات</font></a>
+    <div class="dropdown-menu">
+   
+      <a class="btn btn-outline-secondary" href="{%  url 'my_job:show_tahgag'  %}"> 
+      الشكاوي والبلاغات </a>
+    </div>
+
+</li>
+
+
+ 
+
+
+
+
+ 
+
+
+
+    
+
+  
+   
+   
+    
+  
+  
+
+
+
+
+</ul>
+</nav>
+ </div>
+ </div>
+ <br>
+
+
+
+   <div class="col-lg-12" >
+    <div   class="btn btn-secondary" height="70%"  ><font size="+1"> 
+
+    ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</font>
+  </div></div> </div>
+ 
+  
+
+
+
+
+     
+
+
+ <div class="row" align="center">
+
+   <div class="col-lg-12" >
+  <div   class="btn btn-outline-success" height="70%"  ><font size="+3"> ـــــــــــــــــــــــــــــــ.إشــــــــــــرافــــــــي ــــــــــــــــــــــــــــــــ</font>
+  </div></div> </div>
+  <br>
+  <br>
+  <br>
+
+  
+
+<div class="row">
+ <div class="col-lg-12" style="">
+  <marquee direction="right"  class="btn btn-secondary" height="90%"  ><font size="+3">
+  من اجل مستقبل زاهر لابننا (نظام إشــــــــرافــــــــــي ) يعمل على المتابعة المستمرة  لتحسين مستوى الطالب  وتقييم مستوى المعلم</font></marquee></div>
+</div>
+
+
+
+
+<div class="row"> 
+
+
+
+
+  
+       <div class="col-lg-3">
+   <a class="form-control btn btn-outline-primary"  href="#" >النشاطات</a>
+</div>
+  
+
+
+   <div class="col-lg-3">
+
+    
+    <a     href="#" 
+    class="form-control btn btn-outline-success"> التكريمات</a></span> 
+   </div>
+
+
+
+
+     <div class="col-lg-3">
+   <a class="form-control btn btn-outline-danger"  href="#"   >المخالفات</a>
+</div>
+  
+
+<div class="col-lg-3">
+
+    
+    <a    href="#" 
+    class="form-control btn btn-outline-success"> تهيئة الطالب </a></span> 
+   </div>
+
+
+
+ 
+
+
+  </div>
+
+<div class="row"> 
+
+
+
+
+  
+       <div class="col-lg-3">
+   <a class="form-control btn btn-outline-primary"  
+   href="#" >النتائج</a>
+</div>
+
+
+</div>
+   </div>
+
+
+ 
+
+
+
+       
+
+
+{% endblock  %}
+
+
+
+    
+
+

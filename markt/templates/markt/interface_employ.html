@@ -1,0 +1,75 @@
+  {% extends  'markt/main.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<a href="{% url 'markt:store' %}" class="btn btn-outline-success">  <font size="+1.5"   style="font-family:Noto Kufi Arabic Medium;">
+
+رجوع  </font></a>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row"  align="right">
+ 
+
+ <div class="col-lg-4">
+   
+    <a href="#"class="form-control btn btn-outline-primary"    style="height:100px;">
+    <br>  <font
+    style="font-family:Noto Kufi Arabic Medium;" size="+1.5">
+مدير  الشركة
+</font>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+  <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+  <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+</svg>
+    </a>
+  </div>
+
+  
+
+ <div class="col-lg-4">
+    <a href="#"class="form-control btn btn-outline-primary"   style="height:100px;">
+    <br>    <font
+     style="font-family:Noto Kufi Arabic Medium;" size="+1.5">
+السكرتارية
+</font>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+  <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+  <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+</svg>
+    </a>
+  </div>
+ <div class="col-lg-4">
+    <a href="{% url 'markt:inteface_customer' %}"class="form-control btn btn-outline-primary"   style="height:100px;">
+    <br>    <font
+     style="font-family:Noto Kufi Arabic Medium;" size="+1.5">
+خدمة  العملا
+</font>
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+    </a>
+  </div>
+</div>
+
+
+  
+  {% endblock %}

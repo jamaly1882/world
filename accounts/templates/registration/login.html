@@ -1,0 +1,35 @@
+{% extends   'markt/main.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+  {% if form.errors %}
+    <p>اسم المستخدم او كلمة السر ادخلتها بشكل خاطى</p>
+  {% endif %}
+  
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>حسابك ليس لديه حق الوصول إلى هذه الصفحة.الرجاء تسجيل الدخول بحساب له حق الوصول.</p>
+    {% else %}
+      <p>الرجاء تسجيل الدخول لرؤية هذه الصفحة</p>
+    {% endif %}
+  {% endif %}
+  
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {%  bootstrap_form form %}
+  
+    <input type="submit" value="تسجيل الدخول"class="boxed-btn3 w-100" />
+    <input type="hidden" name="next" value="{{ next }}" />
+
+  </form>
+  {% for message in messages %}
+    <div class="message {{ message.tags }}">
+        {{ message }}
+    </div>
+{% endfor %}
+  
+
+  
+{% endblock %}

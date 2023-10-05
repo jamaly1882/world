@@ -1,0 +1,38 @@
+  {% extends  'markt/main.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<a href="{% url 'markt:store' %}" class="btn btn-outline-success">  <font size="+1.5"   style="font-family:Noto Kufi Arabic Medium;">
+
+رجوع  </font></a>
+
+<br>
+
+<div class="row" >
+   {% for s in sanf  %}
+
+ <div class="col-lg-4">
+   
+    <a href="{% url 'markt:show_acot' s.id  %}"class="form-control btn btn-outline-primary"    style="height:100px;">
+   <br> <font
+    style="font-family:Noto Kufi Arabic Medium;" size="+1.5">{{s.name}}
+   {{s.bine|safe }}
+
+
+
+
+</font>
+
+
+    </a>
+  </div>
+  {%  endfor %}
+
+  
+
+</div>
+
+  
+
+{% endblock content %}

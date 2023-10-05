@@ -1,0 +1,117 @@
+{% extends  'markt/main.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+{% for message in messages  %}
+             <h1>{{message}} </h1>
+
+             {% endfor  %}   
+<a href="{% url 'markt:inteface_customer' %}" class="btn btn-outline-success">  <font size="+1.5"   style="font-family:Noto Kufi Arabic Medium;">
+
+رجوع  </font></a>
+<form  id="form_werd"
+ enctype="multipart/form-data"> 
+    {% csrf_token %}
+       
+         
+
+            
+                <label><font size="+1.5" style="font-family: Noto Kufi Arabic Medium;">اسم الصنف </font></label>
+          <input type="text" value=""name="werd_name" class="form-control"dir="rtl"
+          id="prod_name" >
+
+
+          
+           
+             
+           
+     <hr>
+     <input type="hidden"   id="hid_anjaz" name="hidden_anjaz">
+           <input type="hidden"   id="text36">
+
+        <input type="submit" value="ترحيل"   class="btn btn-primary" style="font-family: Noto Kufi Arabic Medium;size:1.5px;">
+
+  
+
+
+  </form>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script type="text/javascript">      
+var $j = jQuery.noConflict();
+ $j(document).ready(function() {
+$('#form_werd').submit(function(e) {
+        e.preventDefault();
+                    var today = new Date();
+
+// تحويل التاريخ إلى سلسلة نصية باستخدام الصيغة المحددة.
+var date_string = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+// تعيين القيمة المستخدمة إلى حقل النص المحدد.
+$('#text36').val(date_string);
+  
+   
+        
+        var prod_name=$('#prod_name').val()
+
+
+
+
+       
+      
+
+
+ if(prod_name==""){
+  alert("يجب عليك ادخال اسم الصنف")
+         $('#prod_name').css('border-color','red');
+
+          }
+     else if(!/^[ء-ي\s]+$/.test(prod_name)){
+  alert("يجب ان يكون اسم الصنف  نص وليس رمز  ")
+         $('#prod_name').css('border-color','red');
+            
+          }
+
+
+     
+       
+else{
+         
+
+      
+var  form_data = new FormData();
+ var form_data = new FormData(this);
+
+
+
+
+form_data.append('prod_name', document.querySelector('#prod_name').value);
+
+var xhr = new XMLHttpRequest();
+xhr.open('POST', '/markt/add_sanf_db');
+xhr.onload = function() {
+    alert("تم الترحيل بنجاح")
+   
+    window.location.href="{%  url 'markt:add_sanf' %}"
+};
+xhr.send(form_data); 
+}
+});
+});
+</script>
+
+
+
+  <script type="text/javascript">
+var anjaz=document.querySelector('#anjaz');
+anjaz.addEventListener('change',function(){
+t=anjaz.value;
+
+document.getElementById("hid_anjaz").value=t;
+
+
+
+});
+  </script>
+
+  {% endblock %}
